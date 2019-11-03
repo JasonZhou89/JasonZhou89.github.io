@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:1313/" />
 
-<meta property="og:updated_time" content="2019-11-03T12:28:15+08:00" />
+<meta property="og:updated_time" content="2019-11-03T18:28:29+08:00" />
 <meta itemprop="name" content="Even - A super concise theme for Hugo">
 <meta itemprop="description" content="Hugo theme even example site.">
 
@@ -141,7 +141,7 @@
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">Markdown基本语法</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">使用Hugo&#43;Github pages搭建个人网站</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-11-03 </span>
       <div class="post-category">
@@ -152,10 +152,146 @@
   
   <div class="post-content">
     <div class="post-summary">
-      推荐编辑器：vscode markdown vscode插件 markdown all in one:快捷键+数学公式 Ctrl + B 粗体 Ctrl + I 斜体 Alt + S 删除线 Ctrl + Shift + ] 标题(uplevel) Ctrl +
+      <h1 id="使用hugo-github-pages搭建个人网站">使用Hugo+Github pages搭建个人网站</h1>
+
+<hr />
+
+<h2 id="1-安装hugo">1. 安装Hugo</h2>
+
+<p><a href="https://github.com/gohugoio/hugo/releases">官网直接下载安装即可</a><br />
+  - ubuntu示例：<br />
+    *  选择指定版本的deb包，复制下载链接<br />
+        * wget <a href="https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb">https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb</a><br />
+        * dpkg -i hugo*.deb<br />
+        * 将hugo添加到PATH路径<br />
+        * hugo version测试</p>
+
+<hr />
+
+<h2 id="2-构建hugo项目">2. 构建Hugo项目</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo new site [project-name]</pre></td></tr></table>
+</div>
+</div>
+<p>例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo new site jason-site</pre></td></tr></table>
+</div>
+</div>
+<p>构建完成后，在jason-site文件夹下会生成以下目录结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">.
+├── archetypes # 新生成文章的模版
+├── config.toml # 存放 hugo 配置文件
+├── content # 存放 markdown 文件
+├── data # 存放 Hugo 处理的数据
+├── layouts # 存放布局文件
+├── static # 存放静态文件 图片 CSS JS文件
+└── themes # 存放主题</pre></td></tr></table>
+</div>
+</div>
+<hr />
+
+<h2 id="3-添加主题">3. 添加主题</h2>
+
+<p>为快速搭建网站，可从<a href="https://themes.gohugo.io/">Huto主题市场</a>下载相关主题。以even主题为例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">cd jason-site
+git clone https://github.com/olOwOlo/hugo-theme-even themes/even</pre></td></tr></table>
+</div>
+</div>
+<hr />
+
+<h2 id="4-启动hugo">4. 启动Hugo</h2>
+
+<p>将themes/even/exampleSite文件夹下的所有内容拷贝到jason-site根目录下，启动Hugo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo server</pre></td></tr></table>
+</div>
+</div>
+<p>浏览器打开<code>http://localhost:1313</code>浏览效果</p>
+
+<hr />
+
+<h2 id="5-配置主题">5.配置主题</h2>
+
+<p>&ensp;&ensp;&ensp;&ensp;为了满足个性需求，需要修改config.tom文件。</p>
+
+<p>&ensp;&ensp;&ensp;&ensp;进入themes/even文件夹，会发现目录结构和新建的Hugo项目目录结构几乎一致。这样设置是为了用户的配置可以覆盖掉主题的配置。<br />
+&ensp;&ensp;&ensp;&ensp;比如，在项目目录下新建layouts/partials/footer.html文件，填入自定义内容，可以覆盖掉hugo-theme-even主题由themes/even/layouts/partials/footer.html底部配置定义的底部显示。</p>
+
+<hr />
+
+<h2 id="6-生成新的文章">6.生成新的文章</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo new posts/first-post.md</pre></td></tr></table>
+</div>
+</div>
+<p>在content目录中会自动以archetypes/default.md为模板在content/posts目录下生成一篇名为first-post.md的文章草稿：</p>
+
+<blockquote>
+<hr />
+
+<p>title: &ldquo;First Post&rdquo;<br />
+date: 2017-12-27T23:15:53-05:00<br />
+draft: true</p>
+
+<hr />
+</blockquote>
     </div>
     <div class="read-more">
-      <a href="/post/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="read-more-link">Read more...</a>
+      <a href="/post/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/my-first-blog/">My First Blog</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-10-31 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      
+    </div>
+    <div class="read-more">
+      <a href="/post/my-first-blog/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -199,27 +335,6 @@ We&rsquo;ll start with creating a new site with a very basic template.
     </div>
     <div class="read-more">
       <a href="/post/japanese-preview/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/chinese-preview/">[中文] 《长恨歌》</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-08-30 </span>
-      <div class="post-category">
-          <a href="/categories/%E4%B8%AD%E6%96%87/"> 中文 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。 第一段：贵妃受宠爱 汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。 天生丽质难
-    </div>
-    <div class="read-more">
-      <a href="/post/chinese-preview/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

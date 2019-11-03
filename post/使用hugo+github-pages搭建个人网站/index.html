@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>使用Hugo&#43;Github pages搭建个人网站 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Jason zhou" /><meta name="description" content="使用Hugo&#43;Github pages搭建个人网站 1. 安装Hugo 官网直接下载安装即可
+- ubuntu示例：
+* 选择指定版本的deb包，复制下载链接
+* wget https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb
+* dpkg -i hugo*.deb
+* 将hugo添加到PATH路径
+* hugo version测试
+2. 构建Hugo项目 1  hugo new site [project-name]   例如：
+1  hugo new site jason-site   构建完成后，在jason-site文件夹下会生成以下目录结构：
+1 2 3 4 5 6 7 8  . ├── archetypes # 新生成文章的模版 ├── config.toml # 存放 hugo 配置文件 ├── content # 存放 markdown 文件 ├── data # 存放 Hugo 处理的数据 ├── layouts # 存放布局文件 ├── static # 存放静态文件 图片 CSS JS文件 └── themes # 存放主题   3. 添加主题 为快速搭建网站，可从Huto主题市场下载相关主题。以even主题为例：
+1 2  cd jason-site git clone https://github.com/olOwOlo/hugo-theme-even themes/even   4. 启动Hugo 将themes/even/exampleSite文件夹下的所有内容拷贝到jason-site根目录下，启动Hugo:
+1  hugo server   浏览器打开http://localhost:1313浏览效果
+5.配置主题 &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;为了满足个性需求，需要修改config.tom文件。
+&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;进入themes/even文件夹，会发现目录结构和新建的Hugo项目目录结构几乎一致。这样设置是为了用户的配置可以覆盖掉主题的配置。
+&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;比如，在项目目录下新建layouts/partials/footer.html文件，填入自定义内容，可以覆盖掉hugo-theme-even主题由themes/even/layouts/partials/footer.html底部配置定义的底部显示。
+6.生成新的文章 1  hugo new posts/first-post.md   在content目录中会自动以archetypes/default.md为模板在content/posts目录下生成一篇名为first-post.md的文章草稿：
+ title: &amp;ldquo;First Post&amp;rdquo;
+date: 2017-12-27T23:15:53-05:00
+draft: true
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="使用Hugo&#43;Github pages搭建个人网站" />
+<meta property="og:description" content="使用Hugo&#43;Github pages搭建个人网站
+
+
+
+1. 安装Hugo
+
+官网直接下载安装即可
+  - ubuntu示例：
+    *  选择指定版本的deb包，复制下载链接
+        * wget https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb
+        * dpkg -i hugo*.deb
+        * 将hugo添加到PATH路径
+        * hugo version测试
+
+
+
+2. 构建Hugo项目
+
+
+1
+
+
+hugo new site [project-name]
+
+
+例如：
+
+
+1
+
+
+hugo new site jason-site
+
+
+构建完成后，在jason-site文件夹下会生成以下目录结构：
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+.
+├── archetypes # 新生成文章的模版
+├── config.toml # 存放 hugo 配置文件
+├── content # 存放 markdown 文件
+├── data # 存放 Hugo 处理的数据
+├── layouts # 存放布局文件
+├── static # 存放静态文件 图片 CSS JS文件
+└── themes # 存放主题
+
+
+
+
+3. 添加主题
+
+为快速搭建网站，可从Huto主题市场下载相关主题。以even主题为例：
+
+
+1
+2
+
+
+cd jason-site
+git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+
+
+
+
+4. 启动Hugo
+
+将themes/even/exampleSite文件夹下的所有内容拷贝到jason-site根目录下，启动Hugo:
+
+
+1
+
+
+hugo server
+
+
+浏览器打开http://localhost:1313浏览效果
+
+
+
+5.配置主题
+
+&ensp;&ensp;&ensp;&ensp;为了满足个性需求，需要修改config.tom文件。
+
+&ensp;&ensp;&ensp;&ensp;进入themes/even文件夹，会发现目录结构和新建的Hugo项目目录结构几乎一致。这样设置是为了用户的配置可以覆盖掉主题的配置。
+&ensp;&ensp;&ensp;&ensp;比如，在项目目录下新建layouts/partials/footer.html文件，填入自定义内容，可以覆盖掉hugo-theme-even主题由themes/even/layouts/partials/footer.html底部配置定义的底部显示。
+
+
+
+6.生成新的文章
+
+
+1
+
+
+hugo new posts/first-post.md
+
+
+在content目录中会自动以archetypes/default.md为模板在content/posts目录下生成一篇名为first-post.md的文章草稿：
+
+
+
+
+title: &ldquo;First Post&rdquo;
+date: 2017-12-27T23:15:53-05:00
+draft: true
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" />
+<meta property="article:published_time" content="2019-11-03T18:28:29+08:00" />
+<meta property="article:modified_time" content="2019-11-03T18:28:29+08:00" />
+<meta itemprop="name" content="使用Hugo&#43;Github pages搭建个人网站">
+<meta itemprop="description" content="使用Hugo&#43;Github pages搭建个人网站
+
+
+
+1. 安装Hugo
+
+官网直接下载安装即可
+  - ubuntu示例：
+    *  选择指定版本的deb包，复制下载链接
+        * wget https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb
+        * dpkg -i hugo*.deb
+        * 将hugo添加到PATH路径
+        * hugo version测试
+
+
+
+2. 构建Hugo项目
+
+
+1
+
+
+hugo new site [project-name]
+
+
+例如：
+
+
+1
+
+
+hugo new site jason-site
+
+
+构建完成后，在jason-site文件夹下会生成以下目录结构：
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+.
+├── archetypes # 新生成文章的模版
+├── config.toml # 存放 hugo 配置文件
+├── content # 存放 markdown 文件
+├── data # 存放 Hugo 处理的数据
+├── layouts # 存放布局文件
+├── static # 存放静态文件 图片 CSS JS文件
+└── themes # 存放主题
+
+
+
+
+3. 添加主题
+
+为快速搭建网站，可从Huto主题市场下载相关主题。以even主题为例：
+
+
+1
+2
+
+
+cd jason-site
+git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+
+
+
+
+4. 启动Hugo
+
+将themes/even/exampleSite文件夹下的所有内容拷贝到jason-site根目录下，启动Hugo:
+
+
+1
+
+
+hugo server
+
+
+浏览器打开http://localhost:1313浏览效果
+
+
+
+5.配置主题
+
+&ensp;&ensp;&ensp;&ensp;为了满足个性需求，需要修改config.tom文件。
+
+&ensp;&ensp;&ensp;&ensp;进入themes/even文件夹，会发现目录结构和新建的Hugo项目目录结构几乎一致。这样设置是为了用户的配置可以覆盖掉主题的配置。
+&ensp;&ensp;&ensp;&ensp;比如，在项目目录下新建layouts/partials/footer.html文件，填入自定义内容，可以覆盖掉hugo-theme-even主题由themes/even/layouts/partials/footer.html底部配置定义的底部显示。
+
+
+
+6.生成新的文章
+
+
+1
+
+
+hugo new posts/first-post.md
+
+
+在content目录中会自动以archetypes/default.md为模板在content/posts目录下生成一篇名为first-post.md的文章草稿：
+
+
+
+
+title: &ldquo;First Post&rdquo;
+date: 2017-12-27T23:15:53-05:00
+draft: true
+
+
+">
+
+
+<meta itemprop="datePublished" content="2019-11-03T18:28:29&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-03T18:28:29&#43;08:00" />
+<meta itemprop="wordCount" content="1260">
+
+
+
+<meta itemprop="keywords" content="Hugo,网站,github," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用Hugo&#43;Github pages搭建个人网站"/>
+<meta name="twitter:description" content="使用Hugo&#43;Github pages搭建个人网站
+
+
+
+1. 安装Hugo
+
+官网直接下载安装即可
+  - ubuntu示例：
+    *  选择指定版本的deb包，复制下载链接
+        * wget https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb
+        * dpkg -i hugo*.deb
+        * 将hugo添加到PATH路径
+        * hugo version测试
+
+
+
+2. 构建Hugo项目
+
+
+1
+
+
+hugo new site [project-name]
+
+
+例如：
+
+
+1
+
+
+hugo new site jason-site
+
+
+构建完成后，在jason-site文件夹下会生成以下目录结构：
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+.
+├── archetypes # 新生成文章的模版
+├── config.toml # 存放 hugo 配置文件
+├── content # 存放 markdown 文件
+├── data # 存放 Hugo 处理的数据
+├── layouts # 存放布局文件
+├── static # 存放静态文件 图片 CSS JS文件
+└── themes # 存放主题
+
+
+
+
+3. 添加主题
+
+为快速搭建网站，可从Huto主题市场下载相关主题。以even主题为例：
+
+
+1
+2
+
+
+cd jason-site
+git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+
+
+
+
+4. 启动Hugo
+
+将themes/even/exampleSite文件夹下的所有内容拷贝到jason-site根目录下，启动Hugo:
+
+
+1
+
+
+hugo server
+
+
+浏览器打开http://localhost:1313浏览效果
+
+
+
+5.配置主题
+
+&ensp;&ensp;&ensp;&ensp;为了满足个性需求，需要修改config.tom文件。
+
+&ensp;&ensp;&ensp;&ensp;进入themes/even文件夹，会发现目录结构和新建的Hugo项目目录结构几乎一致。这样设置是为了用户的配置可以覆盖掉主题的配置。
+&ensp;&ensp;&ensp;&ensp;比如，在项目目录下新建layouts/partials/footer.html文件，填入自定义内容，可以覆盖掉hugo-theme-even主题由themes/even/layouts/partials/footer.html底部配置定义的底部显示。
+
+
+
+6.生成新的文章
+
+
+1
+
+
+hugo new posts/first-post.md
+
+
+在content目录中会自动以archetypes/default.md为模板在content/posts目录下生成一篇名为first-post.md的文章草稿：
+
+
+
+
+title: &ldquo;First Post&rdquo;
+date: 2017-12-27T23:15:53-05:00
+draft: true
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">使用Hugo&#43;Github pages搭建个人网站</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-11-03 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/"> 计算机技术 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#使用hugo-github-pages搭建个人网站">使用Hugo+Github pages搭建个人网站</a>
+<ul>
+<li><a href="#1-安装hugo">1. 安装Hugo</a></li>
+<li><a href="#2-构建hugo项目">2. 构建Hugo项目</a></li>
+<li><a href="#3-添加主题">3. 添加主题</a></li>
+<li><a href="#4-启动hugo">4. 启动Hugo</a></li>
+<li><a href="#5-配置主题">5.配置主题</a></li>
+<li><a href="#6-生成新的文章">6.生成新的文章</a></li>
+<li><a href="#7-打包部署">7.打包部署</a>
+<ul>
+<li><a href="#前提条件">前提条件</a></li>
+<li><a href="#打包部署">打包部署</a></li>
+</ul></li>
+<li><a href="#8-配置个人域名-可选">8.配置个人域名(可选)</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="使用hugo-github-pages搭建个人网站">使用Hugo+Github pages搭建个人网站</h1>
+
+<hr />
+
+<h2 id="1-安装hugo">1. 安装Hugo</h2>
+
+<p><a href="https://github.com/gohugoio/hugo/releases">官网直接下载安装即可</a><br />
+  - ubuntu示例：<br />
+    *  选择指定版本的deb包，复制下载链接<br />
+        * wget <a href="https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb">https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb</a><br />
+        * dpkg -i hugo*.deb<br />
+        * 将hugo添加到PATH路径<br />
+        * hugo version测试</p>
+
+<hr />
+
+<h2 id="2-构建hugo项目">2. 构建Hugo项目</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo new site [project-name]</pre></td></tr></table>
+</div>
+</div>
+<p>例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo new site jason-site</pre></td></tr></table>
+</div>
+</div>
+<p>构建完成后，在jason-site文件夹下会生成以下目录结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">.
+├── archetypes # 新生成文章的模版
+├── config.toml # 存放 hugo 配置文件
+├── content # 存放 markdown 文件
+├── data # 存放 Hugo 处理的数据
+├── layouts # 存放布局文件
+├── static # 存放静态文件 图片 CSS JS文件
+└── themes # 存放主题</pre></td></tr></table>
+</div>
+</div>
+<hr />
+
+<h2 id="3-添加主题">3. 添加主题</h2>
+
+<p>为快速搭建网站，可从<a href="https://themes.gohugo.io/">Huto主题市场</a>下载相关主题。以even主题为例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">cd jason-site
+git clone https://github.com/olOwOlo/hugo-theme-even themes/even</pre></td></tr></table>
+</div>
+</div>
+<hr />
+
+<h2 id="4-启动hugo">4. 启动Hugo</h2>
+
+<p>将themes/even/exampleSite文件夹下的所有内容拷贝到jason-site根目录下，启动Hugo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo server</pre></td></tr></table>
+</div>
+</div>
+<p>浏览器打开<code>http://localhost:1313</code>浏览效果</p>
+
+<hr />
+
+<h2 id="5-配置主题">5.配置主题</h2>
+
+<p>&ensp;&ensp;&ensp;&ensp;为了满足个性需求，需要修改config.tom文件。</p>
+
+<p>&ensp;&ensp;&ensp;&ensp;进入themes/even文件夹，会发现目录结构和新建的Hugo项目目录结构几乎一致。这样设置是为了用户的配置可以覆盖掉主题的配置。<br />
+&ensp;&ensp;&ensp;&ensp;比如，在项目目录下新建layouts/partials/footer.html文件，填入自定义内容，可以覆盖掉hugo-theme-even主题由themes/even/layouts/partials/footer.html底部配置定义的底部显示。</p>
+
+<hr />
+
+<h2 id="6-生成新的文章">6.生成新的文章</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo new posts/first-post.md</pre></td></tr></table>
+</div>
+</div>
+<p>在content目录中会自动以archetypes/default.md为模板在content/posts目录下生成一篇名为first-post.md的文章草稿：</p>
+
+<blockquote>
+<hr />
+
+<p>title: &ldquo;First Post&rdquo;<br />
+date: 2017-12-27T23:15:53-05:00<br />
+draft: true</p>
+
+<hr />
+</blockquote>
+
+<p>draft 管理是否显示此文章。<code>&lt;!--more--&gt;</code> 之前的内容会自动作为页面摘要。</p>
+
+<hr />
+
+<h2 id="7-打包部署">7.打包部署</h2>
+
+<h3 id="前提条件">前提条件</h3>
+
+<ol>
+<li>拥有一个github账号</li>
+
+<li><p>创建一个JasonZhou89.github.io仓库 #将JasonZhou89更换成自己github用户名</p>
+
+<h3 id="打包部署">打包部署</h3></li>
+
+<li><p>将markdown打包成html。hugo -t [themes name]</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo -t even</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>进入打包文件夹</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">cd public</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>初始化git、添加变化到git</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git init
+git add .</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>提交git</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git commit -m &#34;some msg&#34; </pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>添加remote</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git remote add origin https://github.com/JasonZhou89/JasonZhou89.github.io/git</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>推送到github</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git push -u origin master</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>访问<a href="http://JasonZhou89.github.io就可以看到hugo生成的网站啦">http://JasonZhou89.github.io就可以看到hugo生成的网站啦</a></p></li>
+</ol>
+
+<h2 id="8-配置个人域名-可选">8.配置个人域名(可选)</h2>
+
+<p>如果觉得使用JasonZhou89.github.io不够叼，可以考虑使用域名。
+1. 购买一个自己的域名,例如：szyxt.club
+2. 配置域名解析:<br />
+配置CNAME，Host:blog,Points to:jasonzhou89.github.io
+3. 配置jasonzhou89.github.io仓库
+setting-GitHub Pages-Custom domain中填写刚刚设置的域名：<br />
+blog.szyxt.club<br />
+勾选Enforce Https</p>
+
+<p>访问<a href="https://blog.szyxt.club/，就可以看到网站啦">https://blog.szyxt.club/，就可以看到网站啦</a></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Jason zhou</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-11-03
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hugo/">Hugo</a>
+          <a href="/tags/%E7%BD%91%E7%AB%99/">网站</a>
+          <a href="/tags/github/">github</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/even-preview/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Theme preview</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/my-first-blog/">
+            <span class="next-text nav-default">My First Blog</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
