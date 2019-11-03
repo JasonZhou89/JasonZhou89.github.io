@@ -6,7 +6,7 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 31 Oct 2019 21:52:18 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2019 12:28:15 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -32,12 +32,12 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
-      <title>My First Blog</title>
-      <link>http://localhost:1313/post/my-first-blog/</link>
-      <pubDate>Thu, 31 Oct 2019 21:52:18 +0800</pubDate>
+      <title>Markdown基本语法</title>
+      <link>http://localhost:1313/post/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Sun, 03 Nov 2019 12:28:15 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/my-first-blog/</guid>
-      <description></description>
+      <guid>http://localhost:1313/post/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <description>推荐编辑器：vscode markdown vscode插件 markdown all in one:快捷键+数学公式 Ctrl + B 粗体 Ctrl + I 斜体 Alt + S 删除线 Ctrl + Shift + ] 标题(uplevel) Ctrl +</description>
     </item>
     
     <item>
