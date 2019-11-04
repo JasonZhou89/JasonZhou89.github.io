@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Even - A super concise theme for Hugo</title>
+    <title>Categories on Jason - A super concise theme for Hugo</title>
     <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
+    <description>Recent content in Categories on Jason - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 03 Nov 2019 18:28:29 +0800</lastBuildDate>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 03 Nov 2019 12:28:15 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>计算机技术</title>
       <link>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Sun, 03 Nov 2019 18:28:29 +0800</pubDate>
+      <pubDate>Sun, 03 Nov 2019 12:28:15 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
