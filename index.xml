@@ -6,10 +6,24 @@
     <description>Recent content on welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 04 Nov 2019 17:38:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Nov 2019 14:16:26 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用Hugo&#43;Github pages搭建个人网站</title>
+      <link>http://localhost:1313/post/2019/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Mon, 25 Nov 2019 14:16:26 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/2019/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
+      <description>&lt;h3 id=&#34;前提条件&#34;&gt;前提条件&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;拥有一个github账号（很简单哒，自行注册哈&lt;a href=&#34;https://www.github.com&#34;&gt;https://www.github.com&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;创建一个JasonZhou89.github.io仓库（将JasonZhou89更换成自己github用户名）&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
     
     <item>
       <title>About</title>
@@ -24,10 +38,10 @@ It makes use of a variety of open source projects including:
     
     <item>
       <title>Markdown基本语法</title>
-      <link>http://localhost:1313/post/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <link>http://localhost:1313/post/2019/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Sun, 03 Nov 2019 12:28:15 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <guid>http://localhost:1313/post/2019/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
       <description>前言：推荐编辑器：vscode markdown vscode插件 markdown all in one:快捷键+数学公式 Ctrl + B 粗体 Ctrl + I 斜体 Alt + S 删除线 Ctrl + Shift + ] 标题(uplevel</description>
     </item>
     

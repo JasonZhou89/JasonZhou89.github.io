@@ -1,140 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Even - A super concise theme for Hugo</title>
+    <title>Hugo on welcome</title>
     <link>http://localhost:1313/tags/hugo/</link>
-    <description>Recent content in Hugo on Even - A super concise theme for Hugo</description>
+    <description>Recent content in Hugo on welcome</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 03 Nov 2019 18:28:29 +0800</lastBuildDate>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 25 Nov 2019 14:16:26 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用Hugo&#43;Github pages搭建个人网站</title>
-      <link>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
-      <pubDate>Sun, 03 Nov 2019 18:28:29 +0800</pubDate>
+      <link>http://localhost:1313/post/2019/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Mon, 25 Nov 2019 14:16:26 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
-      <description>&lt;h1 id=&#34;使用hugo-github-pages搭建个人网站&#34;&gt;使用Hugo+Github pages搭建个人网站&lt;/h1&gt;
+      <guid>http://localhost:1313/post/2019/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
+      <description>&lt;h3 id=&#34;前提条件&#34;&gt;前提条件&lt;/h3&gt;
 
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;1-安装hugo&#34;&gt;1. 安装Hugo&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;官网直接下载安装即可&lt;/a&gt;&lt;br /&gt;
-  - ubuntu示例：&lt;br /&gt;
-    *  选择指定版本的deb包，复制下载链接&lt;br /&gt;
-        * wget &lt;a href=&#34;https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb&#34;&gt;https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb&lt;/a&gt;&lt;br /&gt;
-        * dpkg -i hugo*.deb&lt;br /&gt;
-        * 将hugo添加到PATH路径&lt;br /&gt;
-        * hugo version测试&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;2-构建hugo项目&#34;&gt;2. 构建Hugo项目&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;hugo new site [project-name]&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;例如：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;hugo new site jason-site&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;构建完成后，在jason-site文件夹下会生成以下目录结构：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;.
-├── archetypes # 新生成文章的模版
-├── config.toml # 存放 hugo 配置文件
-├── content # 存放 markdown 文件
-├── data # 存放 Hugo 处理的数据
-├── layouts # 存放布局文件
-├── static # 存放静态文件 图片 CSS JS文件
-└── themes # 存放主题&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;3-添加主题&#34;&gt;3. 添加主题&lt;/h2&gt;
-
-&lt;p&gt;为快速搭建网站，可从&lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;Huto主题市场&lt;/a&gt;下载相关主题。以even主题为例：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;cd jason-site
-git clone https://github.com/olOwOlo/hugo-theme-even themes/even&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;4-启动hugo&#34;&gt;4. 启动Hugo&lt;/h2&gt;
-
-&lt;p&gt;将themes/even/exampleSite文件夹下的所有内容拷贝到jason-site根目录下，启动Hugo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;hugo server&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;浏览器打开&lt;code&gt;http://localhost:1313&lt;/code&gt;浏览效果&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;5-配置主题&#34;&gt;5.配置主题&lt;/h2&gt;
-
-&lt;p&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;为了满足个性需求，需要修改config.tom文件。&lt;/p&gt;
-
-&lt;p&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;进入themes/even文件夹，会发现目录结构和新建的Hugo项目目录结构几乎一致。这样设置是为了用户的配置可以覆盖掉主题的配置。&lt;br /&gt;
-&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;比如，在项目目录下新建layouts/partials/footer.html文件，填入自定义内容，可以覆盖掉hugo-theme-even主题由themes/even/layouts/partials/footer.html底部配置定义的底部显示。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;6-生成新的文章&#34;&gt;6.生成新的文章&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;hugo new posts/first-post.md&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;在content目录中会自动以archetypes/default.md为模板在content/posts目录下生成一篇名为first-post.md的文章草稿：&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;title: &amp;ldquo;First Post&amp;rdquo;&lt;br /&gt;
-date: 2017-12-27T23:15:53-05:00&lt;br /&gt;
-draft: true&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;/blockquote&gt;</description>
+&lt;ol&gt;
+&lt;li&gt;拥有一个github账号（很简单哒，自行注册哈&lt;a href=&#34;https://www.github.com&#34;&gt;https://www.github.com&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;创建一个JasonZhou89.github.io仓库（将JasonZhou89更换成自己github用户名）&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
   </channel>
