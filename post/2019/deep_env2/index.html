@@ -7,7 +7,7 @@
   <meta name="google-site-verification" content="OQR2HlYBXl3qgSyPXg-QPHaFCc0Qt3SdShVexWuqqdU" />
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>使用Hugo&#43;Github pages搭建个人网站 - welcome to Jason&#39;s blog</title>
+  <title>aws&#43;Anaconda&#43; tensorflow &#43; keras &#43;opencv搭建深度学习网络环境(下--软件篇) - welcome to Jason&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -20,7 +20,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Jason zhou" /><meta name="description" content="前提条件  拥有一个github账号（很简单哒，自行注册哈https://www.github.com） 创建一个JasonZhou89.github.io仓库（将JasonZhou89更换成自己github用户名） " /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Jason zhou" /><meta name="description" content="上篇我们已经在aws上搭建了自己的深度学习主机：
+本文我们将在这台深度学习主机上安装必要的软件工具包，我们开始吧~
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -30,7 +32,7 @@
 <meta name="generator" content="Hugo 0.59.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/2019/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" />
+<link rel="canonical" href="http://localhost:1313/post/2019/deep_env2/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,41 +44,32 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="使用Hugo&#43;Github pages搭建个人网站" />
-<meta property="og:description" content="前提条件
+<meta property="og:title" content="aws&#43;Anaconda&#43; tensorflow &#43; keras &#43;opencv搭建深度学习网络环境(下--软件篇)" />
+<meta property="og:description" content="上篇我们已经在aws上搭建了自己的深度学习主机：
 
-
-拥有一个github账号（很简单哒，自行注册哈https://www.github.com）
-创建一个JasonZhou89.github.io仓库（将JasonZhou89更换成自己github用户名）
-" />
+本文我们将在这台深度学习主机上安装必要的软件工具包，我们开始吧~" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/2019/%E4%BD%BF%E7%94%A8hugo&#43;github-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" />
-<meta property="article:published_time" content="2019-11-25T14:16:26+08:00" />
-<meta property="article:modified_time" content="2019-11-25T14:16:26+08:00" />
-<meta itemprop="name" content="使用Hugo&#43;Github pages搭建个人网站">
-<meta itemprop="description" content="前提条件
+<meta property="og:url" content="http://localhost:1313/post/2019/deep_env2/" />
+<meta property="article:published_time" content="2018-06-19T16:06:02+08:00" />
+<meta property="article:modified_time" content="2018-06-19T16:06:02+08:00" />
+<meta itemprop="name" content="aws&#43;Anaconda&#43; tensorflow &#43; keras &#43;opencv搭建深度学习网络环境(下--软件篇)">
+<meta itemprop="description" content="上篇我们已经在aws上搭建了自己的深度学习主机：
+
+本文我们将在这台深度学习主机上安装必要的软件工具包，我们开始吧~">
 
 
-拥有一个github账号（很简单哒，自行注册哈https://www.github.com）
-创建一个JasonZhou89.github.io仓库（将JasonZhou89更换成自己github用户名）
-">
-
-
-<meta itemprop="datePublished" content="2019-11-25T14:16:26&#43;08:00" />
-<meta itemprop="dateModified" content="2019-11-25T14:16:26&#43;08:00" />
-<meta itemprop="wordCount" content="1337">
+<meta itemprop="datePublished" content="2018-06-19T16:06:02&#43;08:00" />
+<meta itemprop="dateModified" content="2018-06-19T16:06:02&#43;08:00" />
+<meta itemprop="wordCount" content="827">
 
 
 
-<meta itemprop="keywords" content="Hugo," />
+<meta itemprop="keywords" content="深度学习,Anaconda,keras,tensorflow," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用Hugo&#43;Github pages搭建个人网站"/>
-<meta name="twitter:description" content="前提条件
+<meta name="twitter:title" content="aws&#43;Anaconda&#43; tensorflow &#43; keras &#43;opencv搭建深度学习网络环境(下--软件篇)"/>
+<meta name="twitter:description" content="上篇我们已经在aws上搭建了自己的深度学习主机：
 
-
-拥有一个github账号（很简单哒，自行注册哈https://www.github.com）
-创建一个JasonZhou89.github.io仓库（将JasonZhou89更换成自己github用户名）
-"/>
+本文我们将在这台深度学习主机上安装必要的软件工具包，我们开始吧~"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -143,15 +136,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">使用Hugo&#43;Github pages搭建个人网站</h1>
+      <h1 class="post-title">aws&#43;Anaconda&#43; tensorflow &#43; keras &#43;opencv搭建深度学习网络环境(下--软件篇)</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-11-25 </span>
+        <span class="post-time"> 2018-06-19 </span>
         <div class="post-category">
             <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/"> 计算机技术 </a>
             </div>
-          <span class="more-meta"> 约 1337 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+          <span class="more-meta"> 约 827 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -163,59 +156,112 @@
 <ul>
 <li>
 <ul>
-<li>
-<ul>
-<li><a href="#前提条件">前提条件</a></li>
-</ul></li>
-<li><a href="#一-安装hugo">一.安装Hugo</a></li>
-<li><a href="#二-构建hugo项目">二、构建Hugo项目</a></li>
-<li><a href="#三-添加主题">三、添加主题</a></li>
-<li><a href="#四-启动hugo">四、启动Hugo</a></li>
-<li><a href="#五-配置主题">五、配置主题</a></li>
-<li><a href="#六-生成新的文章">六、生成新的文章</a></li>
-<li><a href="#七-打包部署">七、打包部署</a></li>
-<li><a href="#八-配置个人域名-可选">八.配置个人域名(可选)</a></li>
+<li><a href="#软件篇">软件篇：</a></li>
+<li><a href="#一-安装anaconda">一、安装anaconda</a></li>
+<li><a href="#二-创建独立环境">二、创建独立环境</a></li>
+<li><a href="#三-conda安装tensorflow">三、 conda安装tensorflow</a></li>
+<li><a href="#四-安装keras">四、 安装keras</a></li>
+<li><a href="#六-安装项目需要库">六、安装项目需要库</a></li>
+<li><a href="#七-设置jupyter-notebook">七、设置Jupyter notebook</a></li>
 </ul></li>
 </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h3 id="前提条件">前提条件</h3>
+      <p>上篇我们已经在aws上搭建了自己的深度学习主机：</p>
 
-<ol>
-<li>拥有一个github账号（很简单哒，自行注册哈<a href="https://www.github.com">https://www.github.com</a>）</li>
-<li>创建一个JasonZhou89.github.io仓库（将JasonZhou89更换成自己github用户名）</li>
-</ol>
+<p>本文我们将在这台深度学习主机上安装必要的软件工具包，我们开始吧~</p>
 
 <hr />
 
-<h2 id="一-安装hugo">一.安装Hugo</h2>
+<h2 id="软件篇">软件篇：</h2>
 
-<p><a href="https://gohugo.io/">Hugo官网</a>简介如下：<br />
-The world’s fastest framework for building websites</p>
+<p>深度学习中，我们需要调用各种已第三方库以及其依赖库，这里推荐使用anaconda，简单方便，至少不会为了各种依赖项而头疼。</p>
 
-<p><a href="https://github.com/gohugoio/hugo/releases">release版本下载安装即可</a></p>
+<h2 id="一-安装anaconda">一、安装anaconda</h2>
 
-<p><strong>windows示例:</strong></p>
+<ul>
+<li><p>下载,linux环境下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">wget https://repo.anaconda.com/archive/Anaconda2-5.2.0-Linux-x86_64.sh</pre></td></tr></table>
+</div>
+</div>
+<p>其他版本可自行前往<a href="https://www.anaconda.com/">官网</a>下载</p></li>
+</ul>
 
-<ol>
-<li>解压缩包，将压缩包内hugo.exe添加到环境变量Path中</li>
-<li>cmd中输入<code>hugo version</code>，如显示如下信息即可</li>
-</ol>
+<p>注意：这个地方下载anaconda2 对应python2.7，之后可以在独立环境中创建python=3.5</p>
 
-<blockquote>
-<p>Hugo Static Site Generator v0.59.0/extended windows/amd64 BuildDate: unknown</p>
-</blockquote>
+<ul>
+<li><p>安装anaconda</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">bash Anaconda2-5.2.0-Linux-x86_64.sh</pre></td></tr></table>
+</div>
+</div>
+<p>一路回车+yes即可，最后确认将路径加入用户的.bashrc中</p></li>
+</ul>
 
+<p>(最后一步如果忘记点yes ，需要手动在~/bashrc 中手动添加 export PATH=/home/ubuntu/anaconda2/bin:$PATH)</p>
+
+<ul>
+<li><p>生效.bashrc</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">source .bashrc</pre></td></tr></table>
+</div>
+</div>
+<hr /></li>
+</ul>
+
+<h2 id="二-创建独立环境">二、创建独立环境</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">conda create -n cv python=3.5
+source activate cv</pre></td></tr></table>
+</div>
+</div>
 <hr />
 
-<h2 id="二-构建hugo项目">二、构建Hugo项目</h2>
+<h2 id="三-conda安装tensorflow">三、 conda安装tensorflow</h2>
 
-<p>cmd在希望创建项目目录下执行：<code>hugo new site [project-name</code><br />
-例如：<br />
-<code>hugo new site jason-site</code><br />
-构建完成后会生成jason-site文件夹，在jason-site文件夹下会生成以下目录结构：</p>
+<p>这里我们安装tensorflow-gpu版本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">anaconda show anaconda/tensorflow-gpu</pre></td></tr></table>
+</div>
+</div>
+<p><img src="https://pic2.zhimg.com/80/v2-d934356e37ca713074a07a597eb61f45_hd.jpg" alt="" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">conda install --channel https://conda.anaconda.org/anaconda tensorflow-gpu</pre></td></tr></table>
+</div>
+</div>
+<hr />
+
+<h2 id="四-安装keras">四、 安装keras</h2>
+
+<p>这里我们直接源码安装(貌似conda install keras 也可以)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -223,75 +269,18 @@ The world’s fastest framework for building websites</p>
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">.
-├── archetypes # 新生成文章的模版
-├── config.toml # 存放 hugo 配置文件
-├── content # 存放 markdown 文件
-├── data # 存放 Hugo 处理的数据
-├── layouts # 存放布局文件
-├── static # 存放静态文件 图片 CSS JS文件
-└── themes # 存放主题</pre></td></tr></table>
+<pre class="chroma">git clone https://github.com/fchollet/keras.git
+
+cd keras/
+
+python setup.py install</pre></td></tr></table>
 </div>
 </div>
 <hr />
 
-<h2 id="三-添加主题">三、添加主题</h2>
-
-<p>为了快速搭建网站，可以从<a href="https://themes.gohugo.io/">Hugo主题市场</a>下载相关主题。</p>
-
-<p>以下以even主题为例：<a href="https://github.com/olOwOlo/hugo-theme-even">https://github.com/olOwOlo/hugo-theme-even</a></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">cd jason-site
-git clone https://github.com/olOwOlo/hugo-theme-even themes/even</pre></td></tr></table>
-</div>
-</div>
-<hr />
-
-<h2 id="四-启动hugo">四、启动Hugo</h2>
-
-<p>将themes/even/exampleSite文件夹下所有内容拷贝到jason-site根目录下，启动Hugo：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">hugo server</pre></td></tr></table>
-</div>
-</div>
-<p>浏览器打开<code>http://localhost:1313</code>即可浏览网站效果</p>
-
-<hr />
-
-<h2 id="五-配置主题">五、配置主题</h2>
-
-<p>为了满足个性需求，可以修改config.tom文件。</p>
-
-<p>进入themes/even文件夹，会发现目录结构和新建的Hugo项目目录结构几乎一致。这样设置是为了用户的配置可以覆盖掉主题的配置。</p>
-
-<p>比如，在项目目录下新建layouts/partials/footer.html文件，填入自定义内容，可以覆盖掉hugo-theme-even主题由themes/even/layouts/partials/footer.html底部配置定义的底部显示。</p>
-
-<hr />
-
-<h2 id="六-生成新的文章">六、生成新的文章</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">hugo new post/first.md</pre></td></tr></table>
-</div>
-</div>
-<p>在content目录中会自动以archetypes/default.md为模板在content/post目录下生成一篇名为first.md的文章草稿：</p>
+<h2 id="六-安装项目需要库">六、安装项目需要库</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -299,106 +288,52 @@ git clone https://github.com/olOwOlo/hugo-theme-even themes/even</pre></td></tr>
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">---
-title: &#34;First Post&#34;
-date: 2017-12-27T23:15:53-05:00
-draft: true
----
-&lt;!--more--&gt;</pre></td></tr></table>
+<pre class="chroma">conda install opencv
+conda install numpy pandas jupyter notebook matplotlib cython
+pip install pillow
+pip install pydot
+sudo apt-get install graphviz</pre></td></tr></table>
 </div>
 </div>
-<p>draft 管理是否显示此文章。<code>&lt;!--more--&gt;</code> 之前的内容会自动作为页面摘要。</p>
-
 <hr />
 
-<h2 id="七-打包部署">七、打包部署</h2>
-
-<ol>
-<li><p>将markdown打包成html。hugo -t [themes name]</p>
+<h2 id="七-设置jupyter-notebook">七、设置Jupyter notebook</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">hugo -t even</pre></td></tr></table>
+<pre class="chroma">cd ~
+
+jupyter notebook --generate-config
+
+jupyter notebook password（记住此密码，用浏览器访问连接时会用到）
+
+vim ~/.jupyter/jupyter_notebook_config.py（修改下面两个地方）
+
+&gt; c.NotebookApp.ip=&#39;*&#39;
+
+&gt; c.NotebookApp.open_browser = False</pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>进入打包文件夹</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">cd public</pre></td></tr></table>
 </div>
-</div></li>
+<p>好的，到这里深度学习的环境算是搭建完成了，可以启动jupyter notebook啦。</p>
 
-<li><p>初始化git、添加变化到git</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">git init
-git add -A</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>提交git</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">git commit -m &#34;some msg&#34;</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>添加remote(注意替换成自己的仓库链接)</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">git remote add origin https://github.com/JasonZhou89/JasonZhou89.github.io/git</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>推送到github</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">git push -u origin master</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>访问<a href="http://JasonZhou89.github.io">http://JasonZhou89.github.io</a> 就可以看到hugo生成的网站啦</p></li>
-</ol>
-
-<hr />
-
-<h2 id="八-配置个人域名-可选">八.配置个人域名(可选)</h2>
-
-<p>如果觉得使用JasonZhou89.github.io不够叼，可以考虑使用域名。</p>
-
-<ol>
-<li>购买一个自己的域名,例如：szyxt.club</li>
-<li>配置域名解析:<br />
-配置CNAME，Host:blog,Points to:jasonzhou89.github.io</li>
-<li>配置jasonzhou89.github.io仓库
-setting-GitHub Pages-Custom domain中填写刚刚设置的域名：<br />
-blog.szyxt.club<br />
-勾选Enforce Https<br /></li>
-</ol>
-
-<p>访问<a href="https://blog.szyxt.club/">https://blog.szyxt.club/</a> ，就可以看到网站啦</p>
+<p>本地pc浏览器上，访问aws主机8888端口（复制公有dns（ipv4），然后再浏览器中输入 ipv4：8888），我们就可以尽情搭建、训练自己的网络模型啦。
+<img src="https://pic2.zhimg.com/80/v2-b182e61d13a15d6cdbaf60ea9d5ff88d_hd.jpg" alt="" />
+<img src="https://pic2.zhimg.com/80/v2-480cc4b3a67d154ae76db591298b59f1_hd.jpg" alt="" />
+tips：为避免训练网络过程中，因网络波动导致启动jupyter notebook的终端断开链接，从而致使我们白白浪费时间（时间就是金钱一点都不假），建议 nohup jupyter notebook xxxxx.ipynb &gt;&gt; log.txt 2&gt;&amp;1 &amp; 启动。nohup（no hang up）命令，即使退出账户或断开终端的情况下相关的jupyter notebook进程依然运行。</p>
     </div>
 
     <div class="post-copyright">
@@ -409,7 +344,7 @@ blog.szyxt.club<br />
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-11-25
+        2018-06-19
         
     </span>
   </p>
@@ -432,12 +367,19 @@ blog.szyxt.club<br />
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/hugo/">Hugo</a>
+          <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+          <a href="/tags/anaconda/">Anaconda</a>
+          <a href="/tags/keras/">keras</a>
+          <a href="/tags/tensorflow/">tensorflow</a>
           </div>
       <nav class="post-nav">
-        
-        <a class="next" href="/post/2019/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
-            <span class="next-text nav-default">Markdown基本语法</span>
+        <a class="prev" href="/post/2019/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Markdown基本语法</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/2019/deep_env/">
+            <span class="next-text nav-default">aws&#43;Anaconda&#43; tensorflow &#43; keras &#43;opencv搭建深度学习网络环境(上--硬件篇)</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

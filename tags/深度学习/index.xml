@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>深度学习 on welcome to Jason&#39;s blog</title>
+    <link>http://localhost:1313/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 深度学习 on welcome to Jason&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 19 Jun 2018 16:06:02 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>aws&#43;Anaconda&#43; tensorflow &#43; keras &#43;opencv搭建深度学习网络环境(下--软件篇)</title>
+      <link>http://localhost:1313/post/2019/deep_env2/</link>
+      <pubDate>Tue, 19 Jun 2018 16:06:02 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/2019/deep_env2/</guid>
+      <description>&lt;p&gt;上篇我们已经在aws上搭建了自己的深度学习主机：&lt;/p&gt;
+
+&lt;p&gt;本文我们将在这台深度学习主机上安装必要的软件工具包，我们开始吧~&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>aws&#43;Anaconda&#43; tensorflow &#43; keras &#43;opencv搭建深度学习网络环境(上--硬件篇)</title>
+      <link>http://localhost:1313/post/2019/deep_env/</link>
+      <pubDate>Tue, 19 Jun 2018 10:37:26 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/2019/deep_env/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近在做深度学习相关项目，环境搭建废了不少功夫，为了方便以后再次搭建，就有了这篇环境搭建文章，也希望能给更多的朋友带来一点点帮助。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我们将基于aws搭建深度学习主机，然后再这台租来的主机上搭所需软件环境。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
